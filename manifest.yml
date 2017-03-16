@@ -1,0 +1,11 @@
+applications:
+- path: output/webApp.war
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: Demo1Personality
+  host: Demo1Personality
+  disk_quota: 1024M
+  services:
+  - Demo1Personality-personality_insights
+  - availability-monitoring-auto
