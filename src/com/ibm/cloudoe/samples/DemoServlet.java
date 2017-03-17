@@ -96,7 +96,7 @@ public class DemoServlet extends HttpServlet {
 			Executor executor = Executor.newInstance().auth(username, password);
 			Response response = executor.execute(profileRequest);
 			HttpResponse httpResponse = response.returnResponse();
-			logger.info("PERSONALITY INSIGHTS_RESPONSE::"+convertStreamToString(httpResponse.getEntity().getContent()));
+			System.out.println("PERSONALITY INSIGHTS_RESPONSE::"+convertStreamToString(httpResponse.getEntity().getContent()));
 			resp.setStatus(httpResponse.getStatusLine().getStatusCode());
 
 			ServletOutputStream servletOutputStream = resp.getOutputStream();
